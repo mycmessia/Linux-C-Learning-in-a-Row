@@ -1,0 +1,20 @@
+SHRINK_SPACE	inux Programmer's manual
+
+NAME
+	shrink_space - shrink more than one spaces between two words of a string
+
+SYNOPSIS
+	#include <stddef.h>	for size_t
+
+	char *shrink_space(char *dest, const char *src, size_t n);
+
+DESCRIPTION
+	The shrink_space() function shrink the continuation spaces in first n charities of src
+	to one space and copy them to the dest, if the shrinked string is not enough for n, the
+	rest of the dest will be full with '\0'.
+
+RETURN VALUE
+	a pointer to the destination string dest.
+
+NOTES
+	the argument n has two means in this function.
